@@ -4,8 +4,8 @@ buttons.forEach(button => {
   button.addEventListener('click', function() {
     const elements = document.querySelectorAll('*:not(script)');
     const soundFiles = [
-      'clickBattle.mp3',
-      'clickBoss.mp3'
+      'https://www.pibis.net/snd/clickBattle.mp3',
+      'https://www.pibis.net/snd/clickBoss.mp3'
     ];
     const redirectURL = this.getAttribute('data-redirect');
     const randomSoundIndex = Math.floor(Math.random() * soundFiles.length);
