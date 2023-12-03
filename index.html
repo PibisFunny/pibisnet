@@ -38,20 +38,29 @@
 
     </script>
     <script>
-      function getRandomChar() {
-        const characters = 'ABCDEFGHIJKLNOPQRSTUVWXYZ';
-        const randomIndex = Math.floor(Math.random() * characters.length);
-        return characters.charAt(randomIndex);
-      }
+    function getRandomElementFromArray(arr) {
+      const randomIndex = Math.floor(Math.random() * arr.length);
+      return arr[randomIndex];
+    }
 
-      const randomCharElement = document.getElementById('randomChar');
-      const displayCharElement = document.getElementById('displayChar');
+    const charactersAndPhonemes = [
+      'Ch', 'Sh', 'Th', 'Ph', 'Wh', 'Oi', 'Ow', 'Ay', 'Er', 'Ar', 'Or', 'Ir', 'Ur', 'Oo', 'Ou', 'Ai', 'Ee', 'Ie', 'Oo', 'Ue',
+      'Au', 'Oa', 'Ea', 'Ia', 'Ey', 'Ua', 'Ow', 'Igh', 'Ew', 'Oy', 'Uy', 'Ae', 'Ei', 'Ea', 'Eu', 'Ie', 'Ui', 'Au', 'Oi', 'Ay',
+      'Aw', 'Ie', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U',
+      'V', 'W', 'X', 'Y', 'Z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'
+    ];
 
-      const randomCharacter = getRandomChar();
+    const randomOutputElement = document.getElementById('randomOutput');
+    const displayCharElement = document.getElementById('displayChar');
 
-      randomCharElement.textContent = `${randomCharacter}ario`;
+    const randomElement = getRandomElementFromArray(charactersAndPhonemes);
 
-      displayCharElement.textContent = randomCharacter;
+    if (randomElement.length === 1) {
+      displayCharElement.textContent = randomElement;
+      randomOutputElement.textContent = `(${randomElement})ario`;
+    } else {
+      randomOutputElement.textContent = `${randomElement}ario`;
+    }
 
     </script>
 
