@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Pibis.net</title>
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <script src="script.js"></script>
+
+    <p style="text-align: center;">
+      Pibis.net quick select page
+    </p>
+
+    <div style="display:flex; justify-content: center;">
+
+      <button class="effectButton buttonBorder buttA" data-redirect="https://pibis.neocities.org">Home</button>
+      <button class="effectButton buttonBorder buttB" data-redirect="https://pibis.neocities.org/commissions">Commission info</button>
+      <button class="effectButton buttonBorder buttC" data-redirect="https://pibis.neocities.org/characters">Characters</button>
+
+    </div>
+
+    <img style="display: block; margin-left:auto; margin-right:auto;" src="https://pibis.neocities.org/charart/marounidentified.jpg" class="random-hue">
+    <p id="randomChar" style="text-align:center;"></p>
+    <p id="displayChar" class="random-txt" style="text-align:center; position:relative; top:-338px; left:2px; color: red; font-weight: bold; font-size: 20px;"></p>
+
+    <script>
+      const randomHue = Math.floor(Math.random() * 361);
+
+      const element = document.querySelector('.random-hue');
+      element.style.filter = `hue-rotate(${randomHue}deg)`;
+
+      const textElement = document.querySelector('.random-txt');
+      const hueShift = randomHue;
+      textElement.style.color = `hsl(${hueShift}, 75%, 45%)`;
+
+    </script>
+    <script>
+      function getRandomChar() {
+        const characters = 'ABCDEFGHIJKLNOPQRSTUVWXYZ';
+        const randomIndex = Math.floor(Math.random() * characters.length);
+        return characters.charAt(randomIndex);
+      }
+
+      const randomCharElement = document.getElementById('randomChar');
+      const displayCharElement = document.getElementById('displayChar');
+
+      const randomCharacter = getRandomChar();
+
+      randomCharElement.textContent = `${randomCharacter}ario`;
+
+      displayCharElement.textContent = randomCharacter;
+
+    </script>
+
+  </body>
+
+</html>
