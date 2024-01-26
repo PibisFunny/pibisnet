@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Aario Generator</title>
+    <link rel="shortcut icon" href="https://www.pibis.net/img/favicon.png">
+    <link rel="stylesheet" href="https://www.pibis.net/styling/style.css">
+  </head>
+
+  <body>
+
+    <p style="text-align: center;">WARNING: Generated Aarios may have offensive names! Use at your own risk.</p>
+<br>
+    <p style="text-align: center;">A new Aario is generated with every reload.</p>
+<br>
+   <img style="display: block; margin-left:auto; margin-right:auto;" src="https://pibis.neocities.org/charart/marounidentified.jpg" class="random-hue">
+    <p id="randomChar" style="text-align:center;"></p>
+    <p id="displayChar" class="random-txt" style="text-align:center; position:relative; top:-338px; left:2px; color: red; font-weight: bold; font-size: 20px;"></p>
+
+    <script>
+      const randomHue = Math.floor(Math.random() * 361);
+
+      const imgElement = document.querySelector('.random-hue');
+      imgElement.style.filter = `hue-rotate(${randomHue}deg)`;
+
+      const textElement = document.querySelector('.random-txt');
+      const hueShift = randomHue;
+      textElement.style.color = `hsl(${hueShift}, 75%, 45%)`;
+
+    </script>
+    <script src="https://www.pibis.net/styling/moremario.js"></script>
+
+
+  </body>
+
+</html>
+
