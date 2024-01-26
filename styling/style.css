@@ -1,15 +1,16 @@
 body {
   margin: 0;
-  overflow: hidden;
+  overflow-x: hidden;
   background-color: black;
   color: white;
+  font-family: serif;
 }
 
 .buttonBorder {
   background-color: black;
   color: white;
   width: 128px;
-  height: 128px;
+  height: 64px;
   border-color: white;
   border-style: outset;
   border-width: 2px;
@@ -18,34 +19,59 @@ body {
   margin-bottom: 16px;
   margin-left: 4px;
   margin-right: 4px;
+  font-family: serif;
+  font-size: 14px;
 }
 
 .buttA:hover {
   background-color: black;
-  color: red;
-  width: 128px;
-  height: 128px;
-  border-color: red;
-  border-width: 4px;
+  color: lightpink;
+  border-color: crimson;
 }
 
 .buttB:hover {
   background-color: black;
-  color: yellow;
-  width: 128px;
-  height: 128px;
-  border-color: yellow;
-  border-width: 4px;
+  color: lemonchiffon;
+  border-color: gold;
 }
 
 .buttC:hover {
   background-color: black;
-  color: blue;
-  width: 128px;
-  height: 128px;
-  border-color: blue;
-  border-width: 4px;
+  color: lightcyan;
+  border-color: deepskyblue;
 }
+
+.buttD:hover {
+  background-color: black;
+  color: pink;
+  border-color: hotpink;
+}
+
+
+a:link {
+  color: deepskyblue;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: magenta;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
 
 .getBright {
   animation: getBright 2.5s linear forwards;
@@ -57,6 +83,6 @@ body {
   }
 
   to {
-    filter: contrast(50%) brightness(200%);
+    filter: contrast(0%) brightness(200%);
   }
 }

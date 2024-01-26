@@ -18,36 +18,25 @@
       <button class="effectButton buttonBorder buttA" data-redirect="https://pibis.neocities.org">Home</button>
       <button class="effectButton buttonBorder buttB" data-redirect="https://pibis.neocities.org/commissions">Commission info</button>
       <button class="effectButton buttonBorder buttC" data-redirect="https://pibis.neocities.org/characters">Characters</button>
-<script src="https://www.pibis.net/styling/script.js"></script>
 
     </div>
+    <br>
+    <div style="display:flex; justify-content: center; margin-top:-34px;">
+      <button class="effectButton buttonBorder buttD" data-redirect="https://pibis.neocities.org/aario">Aario Generator</button>
+    </div>
 
-    <img style="display: block; margin-left:auto; margin-right:auto;" src="https://pibis.neocities.org/charart/marounidentified.jpg" class="random-hue">
-    <p id="randomChar" style="text-align:center;"></p>
-    <p id="displayChar" class="random-txt" style="text-align:center; position:relative; top:-338px; left:2px; color: red; font-weight: bold; font-size: 20px;"></p>
-
-    <script>
-      const randomHue = Math.floor(Math.random() * 361);
-
-      const element = document.querySelector('.random-hue');
-      element.style.filter = `hue-rotate(${randomHue}deg)`;
-
-      const textElement = document.querySelector('.random-txt');
-      const hueShift = randomHue;
-      textElement.style.color = `hsl(${hueShift}, 75%, 45%)`;
-
-    </script>
-    <script src="https://www.pibis.net/styling/moremario.js"></script>
-
-    <div style="position:absolute;">
-    <h3>Where to find me!</h3>
-      <ul>
-        <li><a href="https://bsky.app/profile/pibis.net">Bluesky Social: pibis.net</a></li>
-        <li><a href="https://www.youtube.com/@bipis">Youtube: @bipis</a></li>
-        <li>Discord: pibis.net</li>
+    <script src="https://www.pibis.net/styling/script.js"></script>
+    <div style="display:flex; justify-content: center;">
+      <div style="width:300px; margin-top:11px; border-color:white; border-width:2px; border-style:outset;">
+        <h3 style="margin:8px">Where to find me!</h3>
+        <ul>
+          <li><img src="https://www.pibis.net/img/bsky.png"><a href="https://bsky.app/profile/pibis.net" style="margin-left:4px;">Bluesky Social: pibis.net</a></li>
+          <li><img src="https://www.pibis.net/img/yt.png"><a href="https://www.youtube.com/@bipis" style="margin-left:4px;">Youtube: @bipis</a></li>
+          <li><img src="https://www.pibis.net/img/dc.png" style="margin-right:4px;">Discord: pibis.net</li>
         </ul>
+      </div>
     </div>
-
   </body>
 
 </html>
+
