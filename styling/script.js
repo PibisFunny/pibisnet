@@ -1,3 +1,10 @@
+document.addEventListener('DOMContentLoaded', function() {
+  const elements = document.querySelectorAll('*:not(script)');
+  elements.forEach(element => {
+    element.classList.remove('getBright');
+  });
+});
+
 const buttons = document.querySelectorAll('.effectButton');
 
 buttons.forEach(button => {
