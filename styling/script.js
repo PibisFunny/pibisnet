@@ -1,3 +1,15 @@
+// THIS PORTION RESETS THE GETBRIGHT EFFECT
+function resetEffect() {
+  const elements = document.querySelectorAll('*:not(script)');
+  elements.forEach(element => {
+    element.classList.remove('getBright');
+  });
+}
+
+document.addEventListener('DOMContentLoaded', resetEffect);
+window.addEventListener('pageshow', resetEffect);
+// THIS PORTION RESETS THE GETBRIGHT EFFECT
+
 const buttons = document.querySelectorAll('.effectButton');
 
 buttons.forEach(button => {
