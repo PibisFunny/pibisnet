@@ -1,0 +1,123 @@
+body {
+  overflow: hidden;
+}
+
+.bgcheckers {
+	height: 100%;
+	width: 100%;
+	background:
+  conic-gradient(
+		#380f2e 90deg,
+		#2f0d26 90deg 180deg,
+		#380f2e 180deg 270deg,
+		#2f0d26 270deg
+   );
+	background-repeat: repeat;
+	background-size: 42px 42px;
+	background-position: top left;
+}
+
+.baseWindow {
+  background-color: white;
+  border-radius: 8px;
+  border-style: ridge;
+  border-width: 4px;
+  border-color: teal;
+  margin: auto;
+
+  border-top: none;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+  
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.windowHeader {
+  width: calc(100% + 2px);
+  height: 28px;
+  top: -28px;
+  position: absolute;
+  line-height: 28px;
+
+  background: linear-gradient(180deg, rgba(34,107,107,1) 0%, rgba(0,128,128,1) 8%, rgba(0,128,128,1) 38%, rgba(26,147,142,1) 72%, rgba(0,128,128,1) 88%, rgba(0,128,128,1) 92%, rgba(34,107,107,1) 100%);
+
+  border-radius: 8px;
+  border-style: none;
+  border-bottom: none;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-width: 4px;
+  border-color: teal;
+  margin: auto;
+
+  padding-left: 6px;
+
+  position: absolute;
+  left: -4px;
+
+  font-family: Verdana, sans-serif;
+  font-size: 8pt;
+  color: white;
+  font-weight: bold;
+  user-select: none;
+
+  text-shadow: 1px 1px black;
+
+  }
+
+
+.splashtext {
+    -webkit-transform: translate(-50%, -50%) rotate(-15deg);
+    -moz-transform: translate(-50%, -50%) rotate(-15deg);
+    -o-transform: translate(-50%, -50%) rotate(-15deg);
+    -ms-transform: translate(-50%, -50%) rotate(-15deg);
+    transform: translate(-50%, -50%) rotate(-15deg);
+    
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    color: gold;
+    font-family: Comic Sans MS;
+    user-select: none;
+    text-shadow: 1px 1px olive;
+}
+
+.splashContainer {
+  position: absolute;
+  width: 200%; /* 200% should do it for now but it's not a real fix! oops*/
+  left: -116px;
+  top: 110px;
+}
+
+.xButton {
+  background-image: url("https://www.pibis.net/img/buttons/xDefault.png"), linear-gradient(0deg, rgba(173,50,17,1) 0%, rgba(229,86,42,1) 10%, rgba(229,86,42,1) 60%, rgba(238,157,138,1) 90%, rgba(228,90,64,1) 100%);
+  background-position: center;
+  width:20px;
+  height:20px;
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+  border-radius: 4px;
+  font-family: Tahoma, sans-serif;
+  font-size: 12px;
+  color:white;
+  padding: 0px;
+}
+
+.xButton:hover {
+  background-image: url("https://www.pibis.net/img/buttons/xDefault.png"), linear-gradient(0deg, rgba(208,73,54,1) 0%, rgba(255,156,117,1) 10%, rgba(255,118,100,1) 60%, rgba(255,158,147,1) 90%, rgba(255,112,95,1) 100%);
+}
+
+.xButton:active {
+  background-image: url("https://www.pibis.net/img/buttons/xActive.png"), linear-gradient(0deg, rgba(190,66,32,1) 0%, rgba(207,75,36,1) 10%, rgba(193,63,29,1) 60%, rgba(170,50,23,1) 90%, rgba(110,35,16,1) 100%);
+  color: #DF9A87;
+}
+
+/* FONTS BELOW */
