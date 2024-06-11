@@ -112,7 +112,7 @@ body {
 }
 
 .xButton:hover {
-  background-image: url("https://www.pibis.net/img/buttons/xDefault.png"), linear-gradient(0deg, rgba(208,73,54,1) 0%, rgba(255,156,117,1) 10%, rgba(255,118,100,1) 60%, rgba(255,158,147,1) 90%, rgba(255,112,95,1) 100%);
+  background-image: url("https://www.pibis.net/img/buttons/xHover.png"), linear-gradient(0deg, rgba(208,73,54,1) 0%, rgba(255,156,117,1) 10%, rgba(255,118,100,1) 60%, rgba(255,158,147,1) 90%, rgba(255,112,95,1) 100%);
 }
 
 .xButton:active {
