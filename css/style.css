@@ -81,7 +81,7 @@ body {
     left: 50%;
     position: absolute;
     color: gold;
-    font-family: Minecraft, Comic Sans MS;
+    font-family: Comic Sans MS;
     user-select: none;
     text-shadow: 1px 1px olive;
 }
@@ -120,15 +120,10 @@ body {
   color: #DF9A87;
 }
 
-/* FONTS BELOW */
-
-@font-face {
-    font-family: 'Minecraft';
-    src: url('https://www.pibis.net/fonts/Minecraft.eot');
-    src: url('https://www.pibis.net/fonts/Minecraft.eot?#iefix') format('embedded-opentype'),
-        url('https://www.pibis.net/fonts/Minecraft.woff') format('woff'),
-        url('https://www.pibis.net/fonts/Minecraft.ttf') format('truetype'),
-        url('https://www.pibis.net/fonts/Minecraft.svg#Minecraft') format('svg');
-    font-weight: normal;
-    font-style: normal;
+.icon {
+  width: 92px;
+  height: 112px;
+  background-color: red;
 }
+
+/* FONTS BELOW */
