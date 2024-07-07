@@ -24,8 +24,9 @@ document.addEventListener('DOMContentLoaded', function() {
 "He did what in his cup?",
 "Look guys look,",
 "My skeleton popped out!",
-"havy can believe eyes",
-"BALLS THROTTLED"
+"heavy can believe eyes",
+"BALLS THROTTLED",
+"here pass me the You"
 
       ];
 

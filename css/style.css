@@ -120,10 +120,42 @@ body {
   color: #DF9A87;
 }
 
+/*.... ICON STUFF ....*/
+
 .icon {
-  width: 92px;
-  height: 112px;
-  background-color: red;
+  width: 84px;
+  height: 110px;
+  margin-top: 8px;
+}
+.icon:hover {
+  width: 84px;
+  height: 110px;
+  background-color: rgba(200, 200, 200, 0.5);
 }
 
-/* FONTS BELOW */
+.iconTxt {
+  font-family: Verdana, sans-serif;
+  font-size: 8pt;
+  color: white;
+  font-weight: bold;
+  user-select: none;
+  text-align: center;
+  text-shadow: 1px 1px black;
+  position:relative;
+  top:2px;
+}
+
+.iconImg {
+  position: relative;
+  margin:auto;
+  display:block;
+  image-rendering:
+  crisp-edges;
+  top:10px;
+}
+
+.icon.selected {
+  background-color: rgba(200, 200, 200, 0.65); /* More opaque */
+}
+
+/*.... FONTS BELOW ....*/

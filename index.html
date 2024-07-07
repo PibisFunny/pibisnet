@@ -4,7 +4,7 @@
 <head>
   <title>Pibis.net</title>
   <link rel="shortcut icon" href="https://www.pibis.net/img/icons/favicon.png">
-  <link rel="stylesheet" href="https://www.pibis.net/css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 	<link rel="preload" href="https://www.pibis.net/img/buttons/xDefault.png" as="image"/>
 	<link rel="preload" href="https://www.pibis.net/img/buttons/xHover.png" as="image"/>
         <link rel="preload" href="https://www.pibis.net/img/buttons/xActive.png" as="image"/>
@@ -13,7 +13,24 @@
 <body class="bgcheckers">
 
 
-<div class="icon">
+<div class="icon" title="Generate Free Aarios Online" ondblclick="location.href='aariogenerator.html';">
+<img src="img/icons/dsk_aariogen.png" class="iconImg">
+<p class="iconTxt">Aario Generator</p>
+</div>
+
+<div title="PUT THE MONEY IN MY ASS" class="icon" ondblclick="location.href='commissions.html';">
+<img src="img/icons/dsk_aariogen.png" class="iconImg">
+<p class="iconTxt">Commission Info</p>
+</div>
+
+<div title="wiki-esque" class="icon" ondblclick="location.href='characters.html';">
+<img src="img/icons/dsk_aariogen.png" class="iconImg">
+<p class="iconTxt">Characters</p>
+</div>
+
+<div title="Open Soon" class="icon" ondblclick="location.href='characters.html';" style="position:absolute; margin-left:92px; top:0px; height: 118px;">
+<img src="img/icons/dsk_aariogen.png" class="iconImg">
+<p class="iconTxt">Web's Largest Hot Dog</p>
 </div>
 
 
@@ -23,14 +40,12 @@
   <div class="windowHeader">Welcome to Pibis.net
     <button class="xButton" onclick="document.body.removeChild(this.parentNode)"></button>
   </div>
-    <img src="https://www.pibis.net/img/pibis.png" style="margin:auto; display:block; margin-top:20px; image-rendering: crisp-edges;">
+    <img src="img/pibis.png" style="margin:auto; display:block; margin-top:20px; image-rendering: crisp-edges;">
       <div class="splashContainer">
         <p class="splashtext"/>
       </div>
 
-<span>
       <p style="background: rgba(0, 0, 0, 0.5); margin: 10px; display: inline-block; color:white;">Welcome to my website.... anything could happen here</p>
-</span>
 
   </div>
 </div>
@@ -39,6 +54,7 @@
   <script src="js/splashmath.js"></script> 
   <script src="js/splashes.js"></script>
   <script src="js/bgpicker.js"></script>
+  <script src="js/selecter.js"></script>
   <script>
   document.querySelectorAll(".xButton").forEach(button =>
     button.addEventListener("click", e => e.target.closest(".baseWindow").remove())
