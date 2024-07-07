@@ -1,0 +1,51 @@
+.bgcheckers {
+	height: 100%;
+	width: 100%;
+	background:
+  conic-gradient(
+		#380f2e 90deg,
+		#2f0d26 90deg 180deg,
+		#380f2e 180deg 270deg,
+		#2f0d26 270deg
+   );
+	background-repeat: repeat;
+	background-size: 42px 42px;
+	background-position: top left;
+}
+
+.mainPortraitDiv {
+  border-style: outset;
+  border-width: 4px;
+  border-color: lightgrey;
+  background: lightgrey;
+  overflow:hidden;
+  height:440px;
+  width: 300px;
+  margin-left: auto; 
+  margin-right: -40px;
+  margin-top: 60px;
+}
+
+.mainPortraitImg {
+display: block;
+height: 440px;
+margin: auto;
+position: relative;
+image-rendering: auto;
+}
+
+.mainbody {
+width: 840px;
+background: white;
+
+position: absolute;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+}
+
+
+
+
+/*.... FONTS BELOW ....*/

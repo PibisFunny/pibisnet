@@ -3,6 +3,8 @@ function pic() {
 'https://www.pibis.net/img/bg/bg_1.jpg',
 'https://www.pibis.net/img/bg/bg_2.jpg',
 'https://www.pibis.net/img/bg/bg_3.jpg',
+'https://www.pibis.net/img/bg/bg_4.jpg',
+'https://www.pibis.net/img/bg/bg_5.jpg',
 ];
 
 
