@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
 "death surgery",
 "SAY PIZZA TO DRUGS",
 "Borb is he",
+"double gulp cup for the",
 "slurpee",
 "Who's there, Wrighto?",
 "Right behind you",
@@ -26,7 +27,25 @@ document.addEventListener('DOMContentLoaded', function() {
 "My skeleton popped out!",
 "heavy can believe eyes",
 "BALLS THROTTLED",
-"here pass me the You"
+"here pass me the You",
+"here pass you the Me",
+
+"Don't count on it!",
+"There's more!",
+"Don't be weird. Only I can do that",
+"Heavy can believe eyes",
+"KRAKATOA!",
+"IT'S HORRIBLE what happened to Pibis.net",
+"That Heavy is your mother!",
+"That is a diet I call RAINBOWS",
+"Fattest man in history of fattest mans!",
+"ÜBERCHARGE MY CAR",
+"Works best on desktop!",
+
+"I LOOVE caramel",
+"BALLS HAS DESTROYED NUTTY",
+"BALLS IS FRIENDS WITH NUTTY",
+"IIINCOMIIIIING"
 
       ];
 
