@@ -44,7 +44,6 @@ right: 0;
   background-image: url("https://www.pibis.net/img/tile_0.png");
     
   text-align: center; margin: 1em 0;
-  border: 1px solid red;
 }
 .centerHelper {
     display: inline-block;
