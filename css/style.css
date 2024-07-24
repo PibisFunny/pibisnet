@@ -1,5 +1,7 @@
 body {
   overflow: hidden;
+  margin:0;
+  padding:0;
 }
 
 .bgcheckers {
@@ -157,7 +159,7 @@ body {
 /*.... EXPERIMENTAL STYLES BELOW ....*/
 .johntainer { 
   width: 100vh;
-  height: 100vh;
+  height: 200vh;
   perspective-origin: 50% 0px;
   position:absolute;
   top: 0;
@@ -166,7 +168,7 @@ body {
   transform-style: preserve-3d;
 }
 .hellement {
-  background: url(https://www.pibis.net/img/bg_moving.gif) center center repeat;
+  background: url(https://www.pibis.net/img/bg_moving_dark.gif) center center repeat;
   image-rendering: crisp-edges;
   width: 100%;
   height: 100%;    
@@ -182,4 +184,15 @@ body {
 }
 #hellement0 {
   transform: rotateX(60deg);
+}
+
+.vignette {
+box-shadow: inset 0 0 80px rgba(25, 15, 50, 0.3);
+width: 100%;
+height: 100%;
+position:absolute;
+left:0;
+top:0;
+right:0;
+z-index: -5;
 }
