@@ -1,9 +1,16 @@
 body {
-  background: #2C2E31;
-  overflow: hidden;
+  background-image: url("https://pibis.net/img/icons/dsk_aariogen.png");
   margin:0;
   padding:0;
 }
+
+table, th, td {
+  border: 1px solid;
+}
+th, td {
+  width:120px;
+}
+
 
 .prices {
   background: #5e5768;
@@ -12,4 +19,12 @@ body {
   margin:0 auto;
   padding: 8px;
   margin-top: 20px;
+  border-radius: 20px;
+  border: 1px solid;
+}
+
+.examplePiece {
+border: 1px solid;
+height:320px;
+float: right;
 }
