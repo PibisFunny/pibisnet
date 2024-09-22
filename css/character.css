@@ -6,14 +6,16 @@
 .mainPortraitDiv {
   border-style: ridge;
   border-width: 4px;
-  border-color: brown;
-  background: lightgrey;
+  border-color: azure;
+  background: LightGrey;
   overflow:hidden;
   height:440px;
   width: 300px;
   margin-left: auto; 
-  margin-right: -40px;
-  margin-top: 60px;
+  right:-40px;
+  margin-top: 20px;
+  position:absolute;
+  box-shadow: 6px 10px 14px 0px rgba(48,42,54,0.04);
 }
 
 .mainPortraitImg {
@@ -24,14 +26,51 @@ position: relative;
 image-rendering: auto;
 }
 
-.mainbody {
+
+.charTitle {
 width: 840px;
-background: white;
+height: 60px;
+background: azure;
 position: absolute;
 margin-left: auto;
 margin-right: auto;
 left: 0;
 right: 0;
+
+border-style: outset;
+border-width: 8px;
+border-color: azure;
+
+box-shadow: 6px 10px 14px 0px rgba(48,42,54,0.07);
+text-align:center
+
+}
+
+.mainbody {
+width: 840px;
+background: WhiteSmoke;
+position: absolute;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+margin-top: 76px;
+box-shadow: 6px 10px 14px 0px rgba(48,42,54,0.07);
+min-height: 540px;
+}
+
+.gallery {
+width: 840px;
+background: red;
+position: relative;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+margin-top: 60px;
+box-shadow: 6px 10px 14px 0px rgba(48,42,54,0.07);
+min-height: 60px;
+display:block;
 }
 
 .charLogo {
@@ -52,4 +91,7 @@ right: 0;
 }
 
 
-/*.... FONTS BELOW ....*/
+/*.... FONTS AND TEXT FORMATTING BELOW ....*/
+
+
+

@@ -5,6 +5,12 @@ function pic() {
 'https://www.pibis.net/img/bg/bg_3.jpg',
 'https://www.pibis.net/img/bg/bg_4.jpg',
 'https://www.pibis.net/img/bg/bg_5.jpg',
+'https://www.pibis.net/img/bg/bg_6.jpg',
+'https://www.pibis.net/img/bg/bg_7.jpg',
+'https://www.pibis.net/img/bg/bg_8.jpg',
+'https://www.pibis.net/img/bg/bg_9.jpg',
+'https://www.pibis.net/img/bg/bg_10.jpg',
+'https://www.pibis.net/img/bg/bg_11.jpg'
 ];
 
 

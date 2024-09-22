@@ -88,6 +88,10 @@ body {
   top: 110px;
 }
 
+
+
+/*.... BUTTON STUFF ....*/
+
 .xButton {
   background-image: url("https://www.pibis.net/img/buttons/xDefault.png"), linear-gradient(0deg, rgba(173,50,17,1) 0%, rgba(229,86,42,1) 10%, rgba(229,86,42,1) 60%, rgba(238,157,138,1) 90%, rgba(228,90,64,1) 100%);
   background-position: center;
@@ -105,15 +109,81 @@ body {
   color:white;
   padding: 0px;
 }
-
 .xButton:hover {
   background-image: url("https://www.pibis.net/img/buttons/xHover.png"), linear-gradient(0deg, rgba(208,73,54,1) 0%, rgba(255,156,117,1) 10%, rgba(255,118,100,1) 60%, rgba(255,158,147,1) 90%, rgba(255,112,95,1) 100%);
 }
-
 .xButton:active {
   background-image: url("https://www.pibis.net/img/buttons/xActive.png"), linear-gradient(0deg, rgba(190,66,32,1) 0%, rgba(207,75,36,1) 10%, rgba(193,63,29,1) 60%, rgba(170,50,23,1) 90%, rgba(110,35,16,1) 100%);
   color: #DF9A87;
 }
+
+.yellowButton {
+  background-image: linear-gradient(0deg, rgba(165,106,8,1) 0%, rgba(199,138,16,1) 10%, rgba(229,181,24,1) 60%, rgba(236,202,150,1) 90%, rgba(225,169,88,1) 100%);
+  background-position: center;
+  width:20px;
+  height:20px;
+  position: absolute;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+  border-radius: 4px;
+  font-family: Tahoma, sans-serif;
+  font-size: 12px;
+  color:white;
+  padding: 0px;
+}
+.yellowButton:hover {
+  background-image: linear-gradient(0deg, rgba(203,141,9,1) 0%, rgba(234,174,25,1) 10%, rgba(255,228,30,1) 60%, rgba(255,205,130,1) 90%, rgba(255,184,77,1) 100%);
+}
+.yellowButton:active {
+  background-image: linear-gradient(0deg, rgba(207,130,2,1) 0%, rgba(207,130,2,1) 10%, rgba(216,150,3,1) 60%, rgba(171,98,2,1) 90%, rgba(114,68,2,1) 100%);
+}
+
+.greenButton {
+  background-image: linear-gradient(0deg, rgba(2,98,2,1) 0%, rgba(12,125,12,1) 10%, rgba(15,179,15,1) 60%, rgba(136,209,136,1) 90%, rgba(51,152,51,1) 100%);
+  background-position: center;
+  width:20px;
+  height:20px;
+  position: absolute;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+  border-radius: 4px;
+  font-family: Tahoma, sans-serif;
+  font-size: 12px;
+  color:white;
+  padding: 0px;
+}
+.greenButton:hover {
+  background-image: linear-gradient(0deg, rgba(8,134,8,1) 0%, rgba(15,179,15,1) 10%, rgba(27,219,27,1) 60%, rgba(164,217,164,1) 90%, rgba(68,195,68,1) 100%);
+}
+.greenButton:active {
+  background-image: linear-gradient(0deg, rgba(63,160,63,1) 0%, rgba(2,142,2,1) 10%, rgba(2,157,2,1) 60%, rgba(2,98,2,1) 90%, rgba(2,71,2,1) 100%);
+}
+
+.blueButton {
+  background-image: linear-gradient(0deg, rgba(6,65,192,1) 0%, rgba(22,94,229,1) 10%, rgba(38,121,248,1) 60%, rgba(141,173,249,1) 90%, rgba(85,132,246,1) 100%);
+  background-position: center;
+  width:20px;
+  height:20px;
+  position: absolute;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+  border-radius: 4px;
+  font-family: Tahoma, sans-serif;
+  font-size: 12px;
+  color:white;
+  padding: 0px;
+}
+.blueButton:hover {
+  background-image: linear-gradient(0deg, rgba(15,88,204,1) 0%, rgba(36,129,241,1) 10%, rgba(62,180,255,1) 60%, rgba(164,194,255,1) 90%, rgba(85,142,255,1) 100%);
+}
+.blueButton:active {
+  background-image: linear-gradient(0deg, rgba(0,84,185,1) 0%, rgba(0,83,184,1) 10%, rgba(0,95,196,1) 60%, rgba(0,63,151,1) 90%, rgba(0,37,87,1) 100%);
+}
+
+
 
 /*.... ICON STUFF ....*/
 
@@ -154,11 +224,16 @@ body {
   box-shadow:inset 0px 0px 0px 1px rgba(160, 160, 160, 0.65);
 }
 
+
+
 /*.... FONTS BELOW ....*/
 
+
+
 /*.... EXPERIMENTAL STYLES BELOW ....*/
+
 .johntainer { 
-  width: 100vh;
+  width: 100vw;
   height: 200vh;
   perspective-origin: 50% 0px;
   position:absolute;
