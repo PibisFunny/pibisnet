@@ -45,7 +45,9 @@ document.addEventListener('DOMContentLoaded', function() {
 "I LOOVE caramel",
 "BALLS HAS DESTROYED NUTTY",
 "BALLS IS FRIENDS WITH NUTTY",
-"IIINCOMIIIIING"
+"IIINCOMIIIIING",
+
+"Ya probably got CHEESE"
 
       ];
 
