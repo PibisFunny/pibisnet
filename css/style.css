@@ -11,11 +11,13 @@ body {
 
 .baseWindow {
   background-color: white;
-  background: url("https://www.pibis.net/img/bg/bg_4.jpg");
+  /* background: url("https://www.pibis.net/img/bg/bg_4.jpg"); */
   border-radius: 8px;
-  border-style: ridge;
+  border-right-style: ridge;
+  border-bottom-style: ridge;
+  border-left-style: solid;
   border-width: 4px;
-  border-color: teal;
+  border-color: #6d7b95;
   margin: auto;
 
   border-top: none;
@@ -37,8 +39,9 @@ body {
   top: -28px;
   position: absolute;
   line-height: 28px;
-
-  background: linear-gradient(180deg, rgba(34,107,107,1) 0%, rgba(0,128,128,1) 8%, rgba(0,128,128,1) 38%, rgba(26,147,142,1) 72%, rgba(0,128,128,1) 88%, rgba(0,128,128,1) 92%, rgba(34,107,107,1) 100%);
+  
+  background: linear-gradient(to bottom, #5c6880 0%,#e1e6ef 8%,#6d7b95 37%,#626882 57%,#626882 67%,#717c91 91%,#5c6880 100%);
+  /* background: linear-gradient(180deg, rgba(34,107,107,1) 0%, rgba(0,128,128,1) 8%, rgba(0,128,128,1) 38%, rgba(26,147,142,1) 72%, rgba(0,128,128,1) 88%, rgba(0,128,128,1) 92%, rgba(34,107,107,1) 100%); */
 
   border-radius: 8px;
   border-style: none;
@@ -46,7 +49,7 @@ body {
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 0px;
   border-width: 4px;
-  border-color: teal;
+  border-color: #5c6880;
   margin: auto;
 
   padding-left: 6px;
@@ -63,6 +66,64 @@ body {
   text-shadow: 1px 1px black;
 
   }
+
+.taskBar {
+  width: 100%;
+  height: 36px;
+  bottom: 0px;
+  left:120px;
+  position: absolute;
+  line-height: 36px;
+  background: linear-gradient(to bottom, #5c6880 0%,#e1e6ef 8%,#6d7b95 37%,#626882 57%,#626882 67%,#717c91 91%,#5c6880 100%);
+  /* background: linear-gradient(180deg, rgba(34,107,107,1) 0%, rgba(0,128,128,1) 8%, rgba(0,128,128,1) 38%, rgba(26,147,142,1) 72%, rgba(0,128,128,1) 88%, rgba(0,128,128,1) 92%, rgba(34,107,107,1) 100%); */
+  margin: auto;
+  padding-left: 12px;
+  position: absolute;
+  font-family: Verdana, sans-serif;
+  font-size: 8pt;
+  color: white;
+  font-weight: bold;
+  user-select: none;
+  text-shadow: 1px 1px black;
+  display: inline-block;
+  z-index: 5;
+  }
+
+.taskStart {
+  width: 120px;
+  height: 36px;
+  bottom: 0px;
+  position: absolute;
+  line-height: 36px;
+  background: linear-gradient(180deg, rgba(32,113,32,1) 0%, rgba(138,218,131,1) 10%, rgba(52,168,52,1) 40%, rgba(52,168,52,1) 60%, rgba(78,185,76,1) 78%, rgba(61,159,60,1) 91%, rgba(32,113,32,1) 100%);
+  text-shadow: 2px 2px 2px green;
+  margin: auto;
+  padding-left: 6px;
+  position: absolute;
+  font-family: Arial, sans-serif;
+  font-size: 14pt;
+  color: white;
+  font-weight: bold;
+  font-style: italic;
+  user-select: none;
+  display: inline-block;
+  border-bottom-right-radius: 12px 16px;
+  border-top-right-radius: 12px 16px;
+  border-right: 2px solid;
+  border-color: rgba(61,159,60,1);
+  z-index: 6;
+  }
+  .taskStart:hover {
+    background: linear-gradient(to bottom, #218f21 0%,#aeedaa 10%,#32c232 40%,#32c232 60%,#54c852 78%,#3cbb39 91%,#218f21 100%);
+  }
+
+  .taskIcon {
+    margin-left: 16px;
+    box-shadow: 2px 2px 2px green;
+    width: 14px;
+    height: 14px;
+  }
+
 
 
 .splashtext {
@@ -88,7 +149,73 @@ body {
   top: 110px;
 }
 
+.startDropdownCont {
+  display: none;
+  position: absolute;
+  bottom: 36px;
 
+  width: 240px;
+  height: 240px;
+
+  background-color: white;
+  border-radius: 8px;
+  border-right-style: ridge;
+  border-bottom-style: ridge;
+  border-left-style: solid;
+  border-width: 4px;
+  border-color: #6d7b95;
+  margin: auto;
+
+  border-top: none;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+
+  box-shadow: 8px 12px 20px 0px rgba(12, 0, 45, .2);
+}
+
+.startDropdown:hover .startDropdownCont {
+  display: block;
+}
+
+.startDropdown:hover .taskStart {
+  background: linear-gradient(to bottom, #218f21 0%,#aeedaa 10%,#32c232 40%,#32c232 60%,#54c852 78%,#3cbb39 91%,#218f21 100%);
+}
+
+.startHeader {
+  width: calc(100% + 2px);
+  height: 48px;
+  top: -48px;
+  position: absolute;
+  
+  background: linear-gradient(to bottom, #5c6880 0%,#e1e6ef 8%,#6d7b95 37%,#626882 57%,#626882 67%,#717c91 91%,#5c6880 100%);
+
+  border-radius: 8px;
+  border-style: none;
+  border-bottom: none;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-width: 4px;
+  border-color: #5c6880;
+  margin: auto;
+
+  padding-left: 6px;
+
+  left: -4px;
+}
+
+.userText {
+  position:absolute;
+  top: -21px;
+  left: 48px;
+  line-height: 48px;
+  font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+  font-size: 16pt;
+  color: white;
+  font-weight: normal;
+  user-select: none;
+
+  text-shadow: 1px 1px black;
+}
 
 /*.... BUTTON STUFF ....*/
 

@@ -10,11 +10,15 @@ function pic() {
 'https://www.pibis.net/img/bg/bg_8.jpg',
 'https://www.pibis.net/img/bg/bg_9.jpg',
 'https://www.pibis.net/img/bg/bg_10.jpg',
-'https://www.pibis.net/img/bg/bg_11.jpg'
+'https://www.pibis.net/img/bg/bg_11.jpg',
+'https://www.pibis.net/img/bg/bg_12.jpg',
+'https://www.pibis.net/img/bg/bg_13.jpg',
+'https://www.pibis.net/img/bg/bg_14.jpg',
+'https://www.pibis.net/img/bg/bg_15.jpg'
 ];
 
 
-$('.baseWindow').css({
+$('.bgApply').css({
 	'background':'url('+bgm[Math.floor(Math.random()* bgm.length)]+') no-repeat',
 	'background-position':'100%',
 	'background-size':'cover'
