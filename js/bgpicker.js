@@ -23,12 +23,26 @@ function pic() {
 ];
 
 
+for (let i = bgm.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [bgm[i], bgm[j]] = [bgm[j], bgm[i]];
+}
+
+
 $('.bgApply').css({
-	'background':'url('+bgm[Math.floor(Math.random()* bgm.length)]+') no-repeat',
-	'background-position':'100%',
-	'background-size':'cover'
+    'background':'url('+bgm[0]+') no-repeat',
+    'background-position':'100%',
+    'background-size':'cover'
 });
+}
+
+// OLD randomization (replaced with fisher-yates)
+//$('.bgApply').css({
+//	'background':'url('+bgm[Math.floor(Math.random()* bgm.length)]+') no-repeat',
+//	'background-position':'100%',
+//	'background-size':'cover'
+//});
 
 	// body...
-}
+
 pic();
