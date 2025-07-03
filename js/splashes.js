@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-      const sayings = [
+      const splashes = [
 
 "Welcome to Pibis.net!",
 "Feed me weird things!",
@@ -53,20 +53,32 @@ document.addEventListener('DOMContentLoaded', function() {
 "Mmm, burnt toast.",
 "EVERYBODY loves gummy bears!!!!",
 "I... am Beees.",
-"Yeah, I listen to Food Fighters"
+"Yeah, I listen to Food Fighters",
+"His name? Windows 10 Product Keys List Free Download",
+"Did you know?",
+"Direct competitor of yo mama",
+"Great, I'll grab my stuff!",
+"There is no time, your sword is enough!",
+"I hope your PC starts making strange noises",
+"Can I access your printer?",
+"Don't you tell me to smile!",
+"Always remember:",
+"Who's that behind you?",
+"Domain seized by ME",
+"There's nothing better to do!"
       ];
 
-//UNUSED SPLASHES
+//UNUSED/OLD SPLASHES
 //"Full of Gunk!", "blaugh", "titties whoreible!!", "I'm sure you are!~ How's that?",
 
-// I was recommended fisher-yates and it seems like it works a lot better
-for (let i = sayings.length - 1; i > 0; i--) {
+// fisher-yates shuffle seems like it works a lot better
+for (let i = splashes.length - 1; i > 0; i--) {
   const j = Math.floor(Math.random() * (i + 1));
-  [sayings[i], sayings[j]] = [sayings[j], sayings[i]];
+  [splashes[i], splashes[j]] = [splashes[j], splashes[i]];
 }
 
 const splashtexts = document.getElementsByClassName('splashtext');
 for (let i = 0; i < splashtexts.length; i++) {
-  splashtexts[i].textContent = sayings[i % sayings.length];
+  splashtexts[i].textContent = splashes[i % splashes.length];
 }
 });
