@@ -19,7 +19,10 @@ function pic() {
 'https://www.pibis.net/img/bg/bg_17.jpg',
 'https://www.pibis.net/img/bg/bg_18.jpg',
 'https://www.pibis.net/img/bg/bg_19.jpg',
-'https://www.pibis.net/img/bg/bg_20.jpg'
+'https://www.pibis.net/img/bg/bg_20.jpg',
+'https://www.pibis.net/img/bg/bg_21.jpg',
+'https://www.pibis.net/img/bg/bg_22.jpg',
+'https://www.pibis.net/img/bg/bg_23.jpg'
 ];
 
 
