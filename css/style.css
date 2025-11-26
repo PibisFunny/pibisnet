@@ -9,7 +9,7 @@ a {
 }
 
 .bgcheckers {
-  background-image: url("/img/bg_greendex.png");
+  background-image: url("/img/bg_inoffensive.png");
   background-repeat: repeat;
   background-color:#042904;
 }
@@ -22,7 +22,8 @@ a {
   border-bottom-style: ridge;
   border-left-style: solid;
   border-width: 4px;
-  border-color: #6d7b95;
+  /*border-color: #6d7b95;*/
+  border-color: #598b55;
   margin: auto;
 
   border-top: none;
@@ -36,7 +37,11 @@ a {
   right: 0;
 
   box-shadow: 8px 12px 20px 0px rgba(12, 0, 45, .2);
+
+  animation: border-cycle 10s infinite;
+
 }
+
 
 .windowHeader {
   width: calc(100% + 2px);
@@ -69,6 +74,8 @@ a {
   user-select: none;
 
   text-shadow: 1px 1px black;
+
+  animation: bg-cycle 10s infinite; 
 
   }
 
@@ -435,3 +442,140 @@ top:0;
 right:0;
 z-index: -5;
 }
+
+/* .mainBigLogo {
+  display: inline-block;
+  animation: hue-cycle 6s linear infinite;
+  filter: saturate(1.2);
+}
+
+@keyframes hue-cycle {
+  from {
+    filter: hue-rotate(12deg) saturate(1.2);
+  }
+  to {
+    filter: hue-rotate(372deg) saturate(1.2);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mainBigLogo {
+    animation: none;
+    filter: none;
+  }
+}*/
+
+
+@keyframes border-cycle {
+  0%   { border-color: #51638b; }
+  4%   { border-color: #55528b; }
+  8%   { border-color: #5a518b; }
+  12%  { border-color: #67518b; }
+  16%  { border-color: #78518b; }
+  20%  { border-color: #855185; }
+  24%  { border-color: #8b5182; }
+  28%  { border-color: #8b516f; }
+  32%  { border-color: #8b5164; }
+  36%  { border-color: #8b5a58; }
+  40%  { border-color: #8b5a51; }
+  44%  { border-color: #8b6a51; }
+  48%  { border-color: #8b7851; }
+  52%  { border-color: #8a8b51; }
+  56%  { border-color: #828b51; }
+  60%  { border-color: #738b51; }
+  64%  { border-color: #648b51; }
+  68%  { border-color: #598b55; }
+  72%  { border-color: #518b5a; }
+  76%  { border-color: #518b6c; }
+  80%  { border-color: #518b78; }
+  84%  { border-color: #518b82; }
+  88%  { border-color: #51828b; }
+  92%  { border-color: #51788b; }
+  96%  { border-color: #516a8b; }
+  100% { border-color: #51638b; }
+}
+
+
+
+
+@keyframes bg-cycle {
+  0% {
+    background: linear-gradient(to bottom, #51638b 0%, #dfe5f1 8%, #6076a2 37%, #56608e 57%, #56608e 67%, #64779e 91%, #51638b 100%);
+  }
+  4% {
+    background: linear-gradient(to bottom, #55528b 0%, #e1dff1 8%, #6760a2 37%, #62568e 57%, #62568e 67%, #6a649e 91%, #55528b 100%);
+  }
+  8% {
+    background: linear-gradient(to bottom, #5a518b 0%, #e2dff1 8%, #6a60a2 37%, #68568e 57%, #68568e 67%, #6d649e 91%, #5a518b 100%);
+  }
+  12% {
+    background: linear-gradient(to bottom, #67518b 0%, #e7dff1 8%, #7a60a2 37%, #74568e 57%, #74568e 67%, #7d649e 91%, #67518b 100%);
+  }
+  16% {
+    background: linear-gradient(to bottom, #78518b 0%, #ebdff1 8%, #8b60a2 37%, #84568e 57%, #84568e 67%, #8a649e 91%, #78518b 100%);
+  }
+  20% {
+    background: linear-gradient(to bottom, #855185 0%, #efdfee 8%, #976098 37%, #8a567c 57%, #8a567c 67%, #986495 91%, #855185 100%);
+  }
+  24% {
+    background: linear-gradient(to bottom, #8b5182 0%, #f1dfee 8%, #a26098 37%, #8e567c 57%, #8e567c 67%, #9e6495 91%, #8b5182 100%);
+  }
+  28% {
+    background: linear-gradient(to bottom, #8b516f 0%, #f1dfe8 8%, #a26088 37%, #8e566f 57%, #8e566f 67%, #9e6488 91%, #8b516f 100%);
+  }
+  32% {
+    background: linear-gradient(to bottom, #8b5164 0%, #f1dfe5 8%, #a26077 37%, #8e5660 57%, #8e5660 67%, #9e6478 91%, #8b5164 100%);
+  }
+  36% {
+    background: linear-gradient(to bottom, #8b5a58 0%, #f1e2e1 8%, #a26a68 37%, #8e6858 57%, #8e6858 67%, #9e6d68 91%, #8b5a58 100%);
+  }
+  40% {
+    background: linear-gradient(to bottom, #8b5a51 0%, #f1e2df 8%, #a26a60 37%, #8e6856 57%, #8e6856 67%, #9e6d64 91%, #8b5a51 100%);
+  }
+  44% {
+    background: linear-gradient(to bottom, #8b6a51 0%, #f1e8df 8%, #a27a60 37%, #8e7856 57%, #8e7856 67%, #9e7d64 91%, #8b6a51 100%);
+  }
+  48% {
+    background: linear-gradient(to bottom, #8b7851 0%, #f1ebdf 8%, #a28b60 37%, #8e8456 57%, #8e8456 67%, #9e8a64 91%, #8b7851 100%);
+  }
+  52% {
+    background: linear-gradient(to bottom, #8a8b51 0%, #f0f0df 8%, #9ea260 37%, #858e56 57%, #858e56 67%, #9a9e64 91%, #8a8b51 100%);
+  }
+  56% {
+    background: linear-gradient(to bottom, #828b51 0%, #eef1df 8%, #98a260 37%, #7c8e56 57%, #7c8e56 67%, #959e64 91%, #828b51 100%);
+  }
+  60% {
+    background: linear-gradient(to bottom, #738b51 0%, #eaf1df 8%, #88a260 37%, #6f8e56 57%, #6f8e56 67%, #889e64 91%, #738b51 100%);
+  }
+  64% {
+    background: linear-gradient(to bottom, #648b51 0%, #e5f1df 8%, #77a260 37%, #608e56 57%, #608e56 67%, #789e64 91%, #648b51 100%);
+  }
+  68% {
+    background: linear-gradient(to bottom, #598b55 0%, #e1f1e1 8%, #6ca268 37%, #5b8e67 57%, #5b8e67 67%, #729e69 91%, #598b55 100%);
+  }
+  72% {
+    background: linear-gradient(to bottom, #518b5a 0%, #dff1e2 8%, #60a26a 37%, #568e68 57%, #568e68 67%, #649e6d 91%, #518b5a 100%);
+  }
+  76% {
+    background: linear-gradient(to bottom, #518b6c 0%, #dff1e8 8%, #60a278 37%, #568e72 57%, #568e72 67%, #649e78 91%, #518b6c 100%);
+  }
+  80% {
+    background: linear-gradient(to bottom, #518b78 0%, #dff1eb 8%, #60a28b 37%, #568e84 57%, #568e84 67%, #649e8a 91%, #518b78 100%);
+  }
+  84% {
+    background: linear-gradient(to bottom, #518b82 0%, #dff1ee 8%, #60a298 37%, #568e8a 57%, #568e8a 67%, #649e95 91%, #518b82 100%);
+  }
+  88% {
+    background: linear-gradient(to bottom, #51828b 0%, #dfeef1 8%, #6098a2 37%, #567c8e 57%, #567c8e 67%, #64959e 91%, #51828b 100%);
+  }
+  92% {
+    background: linear-gradient(to bottom, #51788b 0%, #dfe9f1 8%, #607ca2 37%, #566f8e 57%, #566f8e 67%, #64789e 91%, #51788b 100%);
+  }
+  96% {
+    background: linear-gradient(to bottom, #516a8b 0%, #dfe6f1 8%, #606fa2 37%, #56648e 57%, #56648e 67%, #64709e 91%, #516a8b 100%);
+  }
+  100% {
+    background: linear-gradient(to bottom, #51638b 0%, #dfe5f1 8%, #6076a2 37%, #56608e 57%, #56608e 67%, #64779e 91%, #51638b 100%);
+  }
+}
+
