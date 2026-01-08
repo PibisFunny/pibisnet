@@ -18,15 +18,17 @@
     <button onClick="window.location.reload();" style="display: block; margin-left:auto; margin-right:auto; width: 160px; height: 50px; font-size: 16pt; font-family: 'Times New Roman', Times, serif;">New Uuigi</button>
 
     <script>
-      const rHue = Math.floor(Math.random() * 361);
+      const rHueRaw = Math.floor(Math.random() * 361);
       const rSat = Math.floor(Math.random() * 151) ;
       const rCont = Math.floor(Math.random() * 101) + 100;
 
+      const rHueGreen = (rHueRaw + 115) % 360;
+
       const imgE = document.querySelector('.random-hue');
-      imgE.style.filter = `hue-rotate(${rHue}deg) contrast(${rCont}%) saturate(${rSat}%)`;
+      imgE.style.filter = `hue-rotate(${rHueRaw}deg) contrast(${rCont}%) saturate(${rSat}%)`;
 
       const txtE = document.querySelector('.random-txt');
-      txtE.style.color = `hsl(${rHue}, ${rSat}%, 50%)`;
+      txtE.style.color = `hsl(${rHueGreen}, ${rSat}%, 50%)`;
     </script>
     <script src="js/moreluigi.js"></script>
 
