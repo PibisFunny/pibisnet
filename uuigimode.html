@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Aario Generator: Uuigi Mode</title>
+    <link rel="shortcut icon" href="https://www.pibis.net/img/icons/favicon.png">
+    <link rel="stylesheet" href="css/aariostyle.css">
+  </head>
+
+  <body>
+    <div style="text-align: center;"><a href="https://pibis.net"><img style="margin-top: 8px;"  src="img/buttons/home_jam.gif" alt="Home Button" title="Home"></a></div>
+    <p style="text-align: center; font-size:12px; color:rgba(255,255,255,0.7)">&#9888; Names of Uuigis are RANDOM and are NOT filtered. Proceed with caution! &#9888;</p>
+    <p style="text-align: center;">A new Uuigi is generated per reload, or at the click of a button.</p>
+<br>
+   <img style="display: block; margin-left:auto; margin-right:auto; box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.35);" src="img/uuigiunidentified.jpg" class="random-hue">
+    <p id="randomChar" style="text-align:center;"></p>
+    <p id="displayChar" class="random-txt" style="text-align:center; position:relative; top:-348px; left:6px; color: limegreen; font-weight: bold; font-size: 20px;"></p>
+    <button onClick="window.location.reload();" style="display: block; margin-left:auto; margin-right:auto; width: 160px; height: 50px; font-size: 16pt; font-family: 'Times New Roman', Times, serif;">New Uuigi</button>
+
+    <script>
+      const rHue = Math.floor(Math.random() * 361);
+      const rSat = Math.floor(Math.random() * 151) ;
+      const rCont = Math.floor(Math.random() * 101) + 100;
+
+      const imgE = document.querySelector('.random-hue');
+      imgE.style.filter = `hue-rotate(${rHue}deg) contrast(${rCont}%) saturate(${rSat}%)`;
+
+      const txtE = document.querySelector('.random-txt');
+      txtE.style.color = `hsl(${rHue}, ${rSat}%, 50%)`;
+    </script>
+    <script src="js/moreluigi.js"></script>
+
+
+  </body>
+
+</html>
+
