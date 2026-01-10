@@ -1,4 +1,4 @@
-    const vowels = 'AEIOU';
+    const vowels = 'AEIOUY';
     const consonants = 'BCDFGHJKLMNPQRSTVWXYZ';
 
     function getRandomChar() {
@@ -8,7 +8,7 @@
     }
 
     function generateCombos() {
-      const displayOptions = ['singleCharacter', 'vowelConsonant', 'consonantVowelConsonant', 'vowelConsonantVowelConsonant'];
+      const displayOptions = ['singleCharacter', 'vowelConsonant', 'consonantVowelConsonant', 'vowelConsonantVowelConsonant', 'consonantVowelVowelConsonant', 'consonantVowelVowel', 'vowelConsonantConsonant', 'vowelConsonantConsonantVowel', 'consonantVowelConsonantConsonantVowel'];
       const choice = displayOptions[Math.floor(Math.random() * displayOptions.length)];
 
       let result;
@@ -26,6 +26,21 @@
           break;
         case 'vowelConsonantVowelConsonant':
           result = genVCVC(character);
+          break;
+        case 'consonantVowelVowelConsonant':
+          result = genCVVC(character);
+          break;
+        case 'consonantVowelVowel':
+          result = genCVV(character);
+          break;
+        case 'vowelConsonantConsonant':
+          result = genVCC(character);
+          break;
+        case 'vowelConsonantConsonantVowel':
+          result = genVCCV(character);
+          break;
+        case 'consonantVowelConsonantConsonantVowel':
+          result = genCVCCV(character);
           break;
         default:
           result = character;
@@ -57,6 +72,42 @@
       let randomC2 = consonants.charAt(Math.floor(Math.random() * consonants.length));
       let randomV2 = vowels.charAt(Math.floor(Math.random() * vowels.length));
       return `${randomV2}${randomC1}${randomV}${randomC2}`;
+    }
+
+
+    function genCVVC(character) {
+      let randomC = consonants.charAt(Math.floor(Math.random() * consonants.length));
+      let randomV = vowels.charAt(Math.floor(Math.random() * vowels.length));
+      let randomV2 = vowels.charAt(Math.floor(Math.random() * vowels.length));
+      let randomC2 = consonants.charAt(Math.floor(Math.random() * consonants.length));
+      return `${randomC}${randomV}${randomV2}${randomC2}`;
+    }
+    function genCVV(character) {
+      let randomC = consonants.charAt(Math.floor(Math.random() * consonants.length));
+      let randomV = vowels.charAt(Math.floor(Math.random() * vowels.length));
+      let randomV2 = vowels.charAt(Math.floor(Math.random() * vowels.length));
+      return `${randomC}${randomV}${randomV2}`;
+    }
+    function genVCC(character) {
+      let randomV = vowels.charAt(Math.floor(Math.random() * vowels.length));
+      let randomC = consonants.charAt(Math.floor(Math.random() * consonants.length));
+      let randomC2 = consonants.charAt(Math.floor(Math.random() * consonants.length));
+      return `${randomV}${randomC}${randomC2}`;
+    }
+    function genVCCV(character) {
+      let randomV = vowels.charAt(Math.floor(Math.random() * vowels.length));
+      let randomC = consonants.charAt(Math.floor(Math.random() * consonants.length));
+      let randomC2 = consonants.charAt(Math.floor(Math.random() * consonants.length));
+      let randomV2 = vowels.charAt(Math.floor(Math.random() * vowels.length));
+      return `${randomV}${randomC}${randomC2}${randomV2}`;
+    }
+    function genCVCCV(character) {
+      let randomC = consonants.charAt(Math.floor(Math.random() * consonants.length));
+      let randomV = vowels.charAt(Math.floor(Math.random() * vowels.length));
+      let randomC2 = consonants.charAt(Math.floor(Math.random() * consonants.length));
+      let randomC3 = consonants.charAt(Math.floor(Math.random() * consonants.length));
+      let randomV2 = vowels.charAt(Math.floor(Math.random() * vowels.length));
+      return `${randomC}${randomV}${randomC2}${randomC3}${randomV2}`;
     }
     
     generateCombos();

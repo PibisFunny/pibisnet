@@ -4,21 +4,51 @@
   <head>
     <title>Web's Largest Hotdog</title>
     <link rel="shortcut icon" href="https://www.pibis.net/img/icons/favicon.png">
+    <link rel="preload" href="https://www.pibis.net/img/bg_checkers.png" as="image"/>
+    <link rel="preload" href="https://www.pibis.net/img/bg_inoffensive.png" as="image"/>
+    <style> .contain {display: flex; justify-content: center; flex-direction: column; align-items: center;}
+            img {display: block;}
+    </style>
   </head>
 
-  <body style="background-color: rgb(44, 41, 59);">
-    <div style="text-align: center;"><a href="https://pibis.net"><img style="margin-top: 8px;"  src="img/buttons/home_jam.gif" alt="Home Button" title="Home"></a></div>
-    <p style="text-align: center; color:white">This is the largest known hotdog on the web. Come back soon to See it.</p>
-    <p style="text-align: center; color:white">Come celebrate Nessdog Day (July 13)! <a href="google.com">Find out how.</a></p>
+  <body style="background-color: rgb(129, 27, 27); background-image: url(img/koplaid6a.jpg);">
+    <div style="text-align: center;"><a href="https://pibis.net"><img style="margin-top: 8px; margin-left: auto; margin-right: auto;"  src="img/buttons/home_jam.gif" alt="Home Button" title="Home"></a></div>
+    <p style="text-align: center; color:yellow; font-weight: bold; font-family: 'Comic Sans MS', cursive; font-size: 15pt; text-shadow: 2px 2px black;">This is the largest known hotdog on the web. Come back soon to See it.</p>
+    <p style="text-align: center; color:yellow; font-weight: bold; font-style: italic; font-family: 'Comic Sans MS', cursive; font-size: 12pt; text-shadow: 2px 2px black;">Come celebrate Nessdog Day (July 13)! <a href="google.com">Find out how.</a></p>
 <br>
-
-<div style="display: flex; justify-content: center;">
-
-</div>
-
-
-
-
+ <!--
+    <div class="contain">
+        <img src="img/bg_checkers.png">
+        <div id="middle"></div>
+    </div>
+    
+    <script>
+        const middle = document.getElementById('middle');
+        
+        function extendHotdog() {
+            const scrollHeight = document.documentElement.scrollHeight;
+            const windowHeight = window.innerHeight;
+            const scrollTop = window.scrollY;
+            
+            if (scrollHeight - (scrollTop + windowHeight) < 1000) {
+                for (let i = 0; i < 5; i++) {
+                    const img = document.createElement('img');
+                    img.src = 'img/bg_inoffensive.png';
+                    middle.appendChild(img);
+                }
+            }
+        }
+        
+        for (let i = 0; i < 10; i++) {
+            const img = document.createElement('img');
+                    img.src = 'img/bg_inoffensive.png';
+            middle.appendChild(img);
+        }
+        
+        window.addEventListener('scroll', extendHotdog);
+        setInterval(extendHotdog, 100);
+    </script>
+    -->
   </body>
 
 </html>
