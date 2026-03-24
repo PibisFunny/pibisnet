@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=320"/>
+    <title>3DSMovies</title>
+    <link rel="shortcut icon" href="https://www.pibis.net/img/icons/favicon.png">
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-image: url('img/textiles/starry.gif');
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      padding: 16px;
+    }
+    .card {
+        display: block;
+        text-decoration: none;
+        color: purple;
+        font-weight: bold;
+        font-family: cursive;
+        font-size: large;
+    }
+    .thumb {
+      width: 100%;
+      aspect-ratio: 1.67/1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: xx-large;
+    }
+    .thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+    }
+    .player-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: #000;
+      padding: 8px;
+      color: white;
+    }
+    .player-overlay.active {
+        display: block;
+    }
+    video {
+        width: 100%;
+        display: block;
+    }
+    .titlecontainer {
+        display:flex;
+        justify-content: center;
+        margin-top: 16px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="titlecontainer">
+    <img style="width: 80%;" src="img/3dsmovies.png"/>
+</div>
+
+<div class="grid" id="videoGrid"></div>
+
+<div class="player-overlay" id="playerOverlay">
+  <button onclick="closePlayer()">Back to list</button>
+  <p id="playerTitle"></p>
+  <video id="videoEl" controls playsinline></video>
+</div>
+
+<div class="titlecontainer">
+    <img src="img/blunkies/pibis.gif"/>
+</div>
+
+<script>
+  const videos = [
+    { title: "Placeholder A", file: "media/3DSM/test.mp4", thumb: "media/3DSM/test.jpg", duration: "0:32" },
+    { title: "Placeholder B", file: "media/3DSM/clip2.mp4", thumb: "", duration: "1:04" },
+    { title: "Placeholder C",  file: "media/3DSM/short.mp4", thumb: "", duration: "3:12" },
+    { title: "Placeholder D",   file: "media/3DSM/anim.mp4",  thumb: "", duration: "0:48" },
+  ];
+
+  const grid = document.getElementById('videoGrid');
+
+  videos.forEach(function(v) {
+    var card = document.createElement('a');
+    card.className = 'card';
+    card.href = '#';
+
+    var thumbHtml = '<div class="thumb">' +
+    (v.thumb
+        ? '<img src="' + v.thumb + '" alt="' + v.title + '">'
+        : '<span>▶︎</span>'
+    ) +
+    '</div>';
+
+    card.innerHTML = thumbHtml + '<div><small>' + v.title + '</small><br><small>' + v.duration + '</small></div>';
+
+    card.addEventListener('click', function(e) {
+      e.preventDefault();
+      playVideo(v);
+    });
+
+    grid.appendChild(card);
+  });
+
+  function playVideo(v) {
+    document.getElementById('playerTitle').textContent = v.title;
+    document.getElementById('videoEl').src = v.file;
+    document.getElementById('playerOverlay').classList.add('active');
+    document.getElementById('videoEl').play();
+  }
+
+  function closePlayer() {
+    var videoEl = document.getElementById('videoEl');
+    videoEl.pause();
+    videoEl.src = '';
+    document.getElementById('playerOverlay').classList.remove('active');
+  }
+</script>
+
+</body>
+</html>
