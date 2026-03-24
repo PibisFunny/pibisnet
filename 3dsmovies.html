@@ -20,7 +20,6 @@
     }
     .thumb {
       width: 100%;
-      aspect-ratio: 1.67/1;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -28,10 +27,10 @@
       background: #646464;
     }
     .thumb img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        display: block;
+      width: 100%;
+      max-width: 144px;
+      height: auto;
+      display: block;
     }
     .player-overlay {
       display: none;
@@ -68,12 +67,14 @@
     <img src="img/blunkies/pibis.gif"/>
 </div>
 
+<a href="/media/3DSM/test.mp4">Test</a>
+
 <script>
   const videos = [
     { title: "Placeholder A", file: "media/3DSM/test.mp4", thumb: "media/3DSM/test.jpg", duration: "0:32" },
-    { title: "Placeholder B", file: "media/3DSM/clip2.mp4", thumb: "", duration: "1:04" },
-    { title: "Placeholder C",  file: "media/3DSM/short.mp4", thumb: "", duration: "3:12" },
-    { title: "Placeholder D",   file: "media/3DSM/anim.mp4",  thumb: "", duration: "0:48" },
+    { title: "Placeholder B", file: "media/3DSM/test.mp4", thumb: "media/3DSM/test.jpg", duration: "1:04" },
+    { title: "Placeholder C",  file: "media/3DSM/test.mp4", thumb: "media/3DSM/test.jpg", duration: "3:12" },
+    { title: "Placeholder D",   file: "media/3DSM/test.mp4",  thumb: "media/3DSM/test.jpg", duration: "0:48" },
   ];
 
   const grid = document.getElementById('videoGrid');
