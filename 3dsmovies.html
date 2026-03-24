@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta name="viewport" content="width=320"/>
     <title>3DSMovies</title>
@@ -9,12 +9,6 @@
         margin: 0;
         padding: 0;
         background-image: url('img/textiles/starry.gif');
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      padding: 16px;
     }
     .card {
         display: block;
@@ -31,6 +25,7 @@
       align-items: center;
       justify-content: center;
       font-size: xx-large;
+      background: #646464;
     }
     .thumb img {
         width: 100%;
@@ -53,28 +48,23 @@
         width: 100%;
         display: block;
     }
-    .titlecontainer {
-        display:flex;
-        justify-content: center;
-        margin-top: 16px;
-    }
   </style>
 </head>
 <body>
 
-<div class="titlecontainer">
+<div style="text-align: center; margin-top: 16px;">
     <img style="width: 80%;" src="img/3dsmovies.png"/>
 </div>
 
-<div class="grid" id="videoGrid"></div>
+<table id="videoGrid" width="100%" cellspacing="8" cellpadding="0"></table>
 
 <div class="player-overlay" id="playerOverlay">
   <button onclick="closePlayer()">Back to list</button>
   <p id="playerTitle"></p>
-  <video id="videoEl" controls playsinline></video>
+  <video id="videoEl" controls></video>
 </div>
 
-<div class="titlecontainer">
+<div style="text-align: center; margin-top: 16px;">
     <img src="img/blunkies/pibis.gif"/>
 </div>
 
@@ -88,26 +78,25 @@
 
   const grid = document.getElementById('videoGrid');
 
-  videos.forEach(function(v) {
-    var card = document.createElement('a');
-    card.className = 'card';
-    card.href = '#';
-
-    var thumbHtml = '<div class="thumb">' +
-    (v.thumb
-        ? '<img src="' + v.thumb + '" alt="' + v.title + '">'
-        : '<span>▶︎</span>'
-    ) +
-    '</div>';
-
-    card.innerHTML = thumbHtml + '<div><small>' + v.title + '</small><br><small>' + v.duration + '</small></div>';
-
-    card.addEventListener('click', function(e) {
+  var row;
+  videos.forEach(function(v, i) {
+    if (i % 2 === 0) {
+      row = document.createElement('tr');
+      grid.appendChild(row);
+    }
+    var td = document.createElement('td');
+    td.width = '50%';
+    td.innerHTML = '<a class="card" href="#">' +
+      '<div class="thumb">' +
+      (v.thumb ? '<img src="' + v.thumb + '" alt="' + v.title + '">' : '<span>&#9654;</span>') +
+      '</div>' +
+      '<small>' + v.title + '</small><br><small>' + v.duration + '</small>' +
+      '</a>';
+    td.querySelector('a').addEventListener('click', function(e) {
       e.preventDefault();
       playVideo(v);
     });
-
-    grid.appendChild(card);
+    row.appendChild(td);
   });
 
   function playVideo(v) {
