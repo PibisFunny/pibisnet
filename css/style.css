@@ -461,15 +461,15 @@ a {
   background: linear-gradient(to bottom, #fcb8c0 0%,#f4a8ad 10%,#e68e8f 25%,#ec8e8e 37%,#f18f8f 50%,#e7696b 51%,#f6a2b1 83%,#fdbdd4 100%);
 }
 
-.igb_orange {
+.ibg_orange {
   background: linear-gradient(to bottom, #fcccb8 0%,#f4c3a8 10%,#e6b18e 25%,#ebb58f 37%,#f1b88f 50%,#e79b69 51%,#f6b6a2 83%,#fdc0bd 100%);
 }
 
-.igb_yellow {
+.ibg_yellow {
   background: linear-gradient(to bottom, #fdecc1 0%,#f7e7b3 10%,#ecdd9c 25%,#f0e29c 37%,#f4e69e 50%,#edd87b 51%,#f8deae 83%,#fee0c6 100%);
 }
 
-.igb_green {
+.ibg_green {
   background: linear-gradient(to bottom, #bbfdb9 0%,#aaf6ad 10%,#90ea98 25%,#91ef9b 37%,#93f39c 50%,#6beb76 51%,#acf7a5 83%,#cffdbf 100%);
 }
 
@@ -477,11 +477,11 @@ a {
     background: linear-gradient(to bottom, #b8e1fc 0%,#a9d2f3 10%,#90bae4 25%,#90bcea 37%,#90bff0 50%,#6ba8e5 51%,#a2daf5 83%,#bdf3fd 100%);
 }
 
-.igb_purple {
+.ibg_purple {
   background: linear-gradient(to bottom, #cab8fc 0%,#c0a8f4 10%,#ae8de7 25%,#b28ded 37%,#b48ef2 50%,#9768e8 51%,#b3a2f6 83%,#bebdfd 100%);
 }
 
-.igb_pink {
+.ibg_pink {
   background: linear-gradient(to bottom, #fac7fd 0%,#f8baf8 10%,#eea4eb 25%,#f2a6ed 37%,#f6a6f0 50%,#ef87ea 51%,#f1b5f9 83%,#eecafe 100%);
 }
 

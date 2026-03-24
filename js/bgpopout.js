@@ -1,4 +1,4 @@
-$('.bgApply').on('click', function () {
+$(document).on('click', '.bgApply', function () {
     let bg = $(this).css('background-image');
 
     let imgSrc = bg.replace(/^url\(["']?/, '').replace(/["']?\)$/, '');
