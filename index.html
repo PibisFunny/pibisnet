@@ -5,137 +5,109 @@
   <title>Pibis.net</title>
   <link rel="shortcut icon" href="https://www.pibis.net/img/icons/favicon.png">
   <link rel="stylesheet" href="css/style.css">
-	<link rel="preload" href="https://www.pibis.net/img/buttons/xDefault.png" as="image"/>
-	<link rel="preload" href="https://www.pibis.net/img/buttons/xHover.png" as="image"/>
-        <link rel="preload" href="https://www.pibis.net/img/buttons/xActive.png" as="image"/>
 	
-	<link rel="preload" href="https://www.pibis.net/img/bg/bg_1.jpg" as="image"/>
-	<link rel="preload" href="https://www.pibis.net/img/bg/bg_2.jpg" as="image"/>
-	<link rel="preload" href="https://www.pibis.net/img/bg/bg_3.jpg" as="image"/>
-	<link rel="preload" href="https://www.pibis.net/img/bg/bg_4.jpg" as="image"/>
-	<link rel="preload" href="https://www.pibis.net/img/bg/bg_5.jpg" as="image"/>
-	<link rel="preload" href="https://www.pibis.net/img/bg/bg_6.jpg" as="image"/>
-	<link rel="preload" href="https://www.pibis.net/img/bg/bg_7.jpg" as="image"/>
-	<link rel="preload" href="https://www.pibis.net/img/bg/bg_8.jpg" as="image"/>
-	<link rel="preload" href="https://www.pibis.net/img/bg/bg_9_2.jpg" as="image"/>
-	<link rel="preload" href="https://www.pibis.net/img/bg/bg_10.jpg" as="image"/>
-	<link rel="preload" href="https://www.pibis.net/img/bg/bg_11.jpg" as="image"/>
-  <link rel="preload" href="https://www.pibis.net/img/bg/bg_12.jpg" as="image"/>
-	<link rel="preload" href="https://www.pibis.net/img/bg/bg_13.jpg" as="image"/>
-	<link rel="preload" href="https://www.pibis.net/img/bg/bg_14.jpg" as="image"/>
-	<link rel="preload" href="https://www.pibis.net/img/bg/bg_15_2.jpg" as="image"/>
-  <link rel="preload" href="https://www.pibis.net/img/bg/bg_16.jpg" as="image"/>
-  <link rel="preload" href="https://www.pibis.net/img/bg/bg_17.jpg" as="image"/>
-  <link rel="preload" href="https://www.pibis.net/img/bg/bg_18.jpg" as="image"/>
-  <link rel="preload" href="https://www.pibis.net/img/bg/bg_19.jpg" as="image"/>
-  <link rel="preload" href="https://www.pibis.net/img/bg/bg_20.jpg" as="image"/>
-  <link rel="preload" href="https://www.pibis.net/img/bg/bg_21.jpg" as="image"/>
-  <link rel="preload" href="https://www.pibis.net/img/bg/bg_22.jpg" as="image"/>
-  <link rel="preload" href="https://www.pibis.net/img/bg/bg_23.jpg" as="image"/>
+  <script>
+    const base = "https://www.pibis.net/img/bg/bg_";
+    const alts = { 9: "9_2", 15: "15_2" };
+    const total = 23;
 
-	<link rel="preload" href="https://www.pibis.net/img/bg_inoffensive.png" as="image"/>
+    for (let i = 1; i <= total; i++) {
+      const name = alts[i] ?? i;
+      const link = document.createElement("link");
+      link.rel = "preload";
+      link.as = "image";
+      link.href = `${base}${name}.jpg`;
+      document.head.appendChild(link);
+    }
+  </script>
 </head>
 
-<body class="bgcheckers">
+<body class="bgcheckers"  style="overflow-y: visible;">
 
-<div class="dayNightToggle">
-</div>
-
-<div class="icon" title="Generate Free Aarios Online" ondblclick="location.href='aariogenerator';">
-<img src="img/icons/dsk_aariogen_2.png" class="iconImg">
-<p class="iconTxt">Aario Generator</p>
-</div>
-
-<div title="gimme one gajillion dollars now" class="icon" ondblclick="location.href='commissions';">
-<img src="img/icons/notfound_64.png" class="iconImg">
-<p class="iconTxt">Commission Info</p>
-</div>
-
-<div title="wiki-esque" class="icon" ondblclick="location.href='characters';" style="height: 97px;">
-<img src="img/icons/notfound_64.png" class="iconImg">
-<p class="iconTxt">Characters</p>
-</div>
-
-<div title="Open Soon" class="icon" ondblclick="location.href='hotdog';" style="position:absolute; margin-left:92px; top:0px; height: 118px;">
-<img src="img/icons/dsk_hotdog.png" class="iconImg">
-<p class="iconTxt">Web's Largest Hot Dog</p>
-</div>
-
-<div title="do NOT hotlink" class="icon" ondblclick="location.href='buttons';" style="position:absolute; margin-left:276px; top:0px;">
-  <img src="img/icons/notfound_64.png" class="iconImg">
-  <p class="iconTxt">Buttons & Stuff</p>
-</div>
-
-<div title="Other stuff you can mess with for funsies" class="icon" ondblclick="location.href='fun';" style="position:absolute; margin-left:368px; top:0px; height: 97px;">
-  <img src="img/icons/folder.png" class="iconImg">
-  <p class="iconTxt">Fun :)</p>
-</div>
-
-
-
-<div class="baseContainter">
-  <div class="baseWindow bgApply" style="height: 480px; width: 640px;">
-  <div class="windowHeader">Welcome to Pibis.net
-    <button class="xButton" onclick="document.body.removeChild(this.parentNode)"></button>
+    <img src="img/pibis.png" class="mainBigLogo" style="position: absolute; left: 50%; transform: translateX(-50%); margin-top: 20px; z-index: 5;">
+  <div style="position:absolute; left: 50%; transform: translateX(-50%); margin-top: 180px;">
+        <ul style="list-style-type: none; padding-left:0; text-align: center;">
+          <li style="background: rgba(255, 255, 255, 0.1); color:white;  padding: 4px; border: 2px solid rgba(255, 255, 255, 0.6);">&nbsp; <img src="/img/icons/yt.png" style="vertical-align: middle;"/> <a href="https://www.youtube.com/@pibisdotnet" target="_blank">YouTube (@pibisdotnet)</a> &nbsp;</li>
+          <li style="background: rgba(255, 255, 255, 0.1); color:white;  padding: 4px; margin-top: 4px; border: 2px solid rgba(255, 255, 255, 0.6);">&nbsp; <img src="/img/icons/bsky.png" style="vertical-align: middle;"/> <a href="https://bsky.app/profile/pibis.net" target="_blank">Bluesky (18+) (@pibis.net)</a> &nbsp;</li>
+          <li style="background: rgba(255, 255, 255, 0.1); color:white; padding: 4px; margin-top: 4px; border: 2px solid rgba(255, 255, 255, 0.6);">&nbsp; <img src="/img/icons/dc.png" style="vertical-align: middle;"/> <a>Discord (@pibis.net)</a> &nbsp;</li>
+        </ul>
   </div>
-    <img src="img/pibis.png" class="mainBigLogo" style="margin:auto; display:block; margin-top:20px; image-rendering: crisp-edges; filter: drop-shadow(0px 0px 10px #00000060);">
       <div class="splashContainer">
         <p class="splashtext"></p>
       </div>
 
-      <p class="starterText">&nbsp; Welcome to my website (Pibis.net). Lots of stuff isn't exactly done yet so watch your step... &nbsp;
-        <br>&nbsp; <span style="color: yellow">&starf; Double-click</span> an icon on the desktop to explore<!--, or view the <a href="https://m.pibis.net">mobile version</a> for quicker
-        <br>&nbsp; navigation-->.</p>
-        <ul style="list-style-type: none;">
-          <li style="background: rgba(0, 0, 0, 0.6); color:white; width:fit-content; margin: 6px; border: 2px solid rgba(0, 0, 0, 0.7);">&nbsp; <img src="/img/icons/bsky.png" style="vertical-align: middle;"/> <a href="https://bsky.app/profile/pibis.net" target="_blank">Bluesky (18+) (@pibis.net)</a> &nbsp;</li>
-          <li style="background: rgba(0, 0, 0, 0.6); color:white; width:fit-content; margin: 6px; border: 2px solid rgba(0, 0, 0, 0.7);">&nbsp; <img src="/img/icons/yt.png" style="vertical-align: middle;"/> <a href="https://www.youtube.com/@pibisdotnet" target="_blank">YouTube (@pibisdotnet)</a> &nbsp;</li>
-          <li style="background: rgba(0, 0, 0, 0.6); color:white; width:fit-content; margin: 6px; border: 2px solid rgba(0, 0, 0, 0.7);">&nbsp; <img src="/img/icons/dc.png" style="vertical-align: middle;"/> <a>Discord (@pibis.net)</a> &nbsp;</li>
-        </ul>
-
-        <p class="starterText">&nbsp; *This window will open again any time the page is loaded! &nbsp;</p>
+  <div style="width: 260px; height: 260px; position:absolute;  right: 10px;  background-image: url('img/textiles/wood.png'); border-radius: 4px;">
+    <div class="clockbg">
+      <p id="clock" style="text-align: center; margin-top: 3px; font-family: Tahoma, Verdana, sans-serif; font-size: 14px; font-weight: bold; color: white; text-shadow: black 1px 1px;"></p>
+    </div>
+    <p class="wood-inset">PIBIS</p>
+    <p class="wood-inset" style="right:0;">CLOCK</p>
+    <div class="bgApply iconPhoto" style="width: 240px; height: 180px; position:absolute;  margin-left: 10px; margin-top: 36px; background-size: cover;">
   </div>
+
+  </div>
+
+
+<div class="iconext" title="Generate Free Aarios Online" data-sound="aariogenerator" onclick="location.href='aariogenerator';">
+<img src="img/icons/dsk_aariogen_2.png" class="iconextImg">
+<p class="iconextTxt">Aario Generator</p>
+<div class="triangle"></div>
 </div>
 
-<!-- WINDOW TEMPLATE <div class="baseContainter">
-  <div class="baseWindow" style="height: 240px; width: 360px;">
-  <div class="windowHeader">Template Window
-    <button class="xButton" onclick="document.body.removeChild(this.parentNode)"></button>
-  </div>
-  </div>
-</div> -->
+<div title="Open TODAY" class="iconext" data-sound="hotdog" onclick="location.href='hotdog';">
+<img src="img/icons/dsk_hotdog.png" class="iconextImg">
+<p class="iconextTxt">Web's Largest Hot Dog</p>
+</div>
 
-<!-- <div class="brightnessButtonsContainer">
-      <button class="yellowButton" style="width:33px; height:33px; border-radius: 5px;"/>
-</div> -->
+<div title="Other fun stuff and toys etc..." class="iconext" data-sound="fun" onclick="location.href='fun';">
+  <img src="img/icons/folder.png" class="iconextImg">
+  <p class="iconextTxt">Toybox</p>
+</div>
 
+<div title="do NOT hotlink" class="iconext" data-sound="buttons" onclick="location.href='buttons';">
+  <img src="img/icons/notfound_64.png" class="iconextImg">
+  <p class="iconextTxt">Buttons & Stuff</p>
+</div>
 
-<!-- 3D background I think? <div class="johntainer" id="johntainer0">
+<div title="wiki-esque" class="iconext" data-sound="characters" onclick="location.href='characters';">
+<img src="img/icons/notfound_64.png" class="iconextImg">
+<p class="iconextTxt">Characters</p>
+</div>
+
+<div title="one gajillion dollars NOW" class="iconext" data-sound="commissions" onclick="location.href='commissions';">
+<img src="img/icons/notfound_64.png" class="iconextImg">
+<p class="iconextTxt">Commission Info</p>
+</div>
+
+<!--3d background -->
+<div class="johntainer" id="johntainer0">
   <div class="hellement" id="hellement0"></div>
 </div>
-<div class="vignette"></div> -->
-
-<p style="position:absolute; bottom: 22px; right:4px; color: white; user-select: none; font-family: 'Comic Sans MS', 'Comic Sans', cursive;">Pibis 2023-2025</p>
 
 <div class="task">
-  <div class="taskBar"><marquee direction="left" scrollamount="4">April & May 2025 - New updates make the page a lot cleaner. <a href="updates.html" style="color: deepskyblue">What?</a></marquee></div>
-  <div class="startDropdown">
-    <div class="taskStart"><img class="taskIcon" src="img/icons/menuIco.png"> menu</div>
-      <div class="startDropdownCont">
-        <div class="startHeader"><img src="img/icons/prof_duck.png" style="width: 32px; height: 32px; margin-top: 6px; border: 2px solid rgb(199, 199, 199); border-radius: 4px;"><p class="userText">Bill</p></div>
-        <p>You're boned!</p>
+  <div class="taskBarext">
+    <div class="marquee">
+      <div>
+        <span>March 2026 - Complete front page design overhaul! <a href="updates.html" style="color: deepskyblue">What?</a></span>
+        <span>March 2026 - Complete front page design overhaul! <a href="updates.html" style="color: deepskyblue">What?</a></span>
       </div>
+    </div>
   </div>
 </div>
 
-<div class="taskClock"><p style="font-size: 7pt; margin-top:6px;">Pibis Clock</p><p id="clock" style="margin-top:-6px;"></p></div>
+<div class="taskClockext"><p style="font-size: 12px; color: white; user-select: none; font-family: 'Comic Sans MS', 'Comic Sans', cursive;">© Pibis 2023-2026</p><p id="clock" style="margin-top:-6px;"></p></div>
 
+<div id="hloverlay">
+  <img src="../img/hlgun.png">
+</div>
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="js/splashmath.js"></script> 
   <script src="js/splashes.js"></script>
   <script src="js/bgpicker.js"></script>
-  <script src="js/selecter.js"></script>
+  <script src="js/gun.js"></script>
+  <script src="js/keys.js"></script>
 
   <script src="js/mobileForward.js"></script>
   <script>

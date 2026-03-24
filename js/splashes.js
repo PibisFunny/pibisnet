@@ -26,10 +26,11 @@ document.addEventListener('DOMContentLoaded', function() {
 "BALLS THROTTLED",
 "here pass me the You",
 "here pass you the Me",
+"Full of Gunk!",
 
 "Don't count on it!",
 "There's more!",
-"Don't be weird. Only I can do that...",
+//"Don't be weird. Only I can do that...",
 "KRAKATOA!",
 "IT'S HORRIBLE what happened to Pibis.net",
 "That Heavy is your mother!",
@@ -65,13 +66,32 @@ document.addEventListener('DOMContentLoaded', function() {
 "Always remember:",
 "Who's that behind you?",
 "Domain seized by ME",
-"There's nothing better to do!"
+"There's nothing better to do!",
+
+"My mango is to blow up",
+"Life... is ██████",
+"Look to the stars...",
+"Moldy, yuck!",
+"Woof!",
+"I'm gonna eat my bed!",
+"JUMPSCARE INCOMING",
+"Press 8 to equip your gun.",
+"Take action regarding that individual!",
+"Relax, I'll handle it.",
+"I AM THE ANGRY PUMPKIN",
+"$101 for a ██████ █████?",
+"~(_8^(I)",
+"That's fantastic!",
+"...Say that again.",
+"That's fantastic!",
+"MORE... MORE",
+"This is delicious!",
+"That's how I lost my medical license!",
+"Mmm... richer!",
+"Mmm... nasty!"
       ];
 
-//UNUSED/OLD SPLASHES
-//"Full of Gunk!", "blaugh", "titties whoreible!!", "I'm sure you are!~ How's that?",
-
-// fisher-yates shuffle seems like it works a lot better
+// fisher-yates shuffle works a lot better
 for (let i = splashes.length - 1; i > 0; i--) {
   const j = Math.floor(Math.random() * (i + 1));
   [splashes[i], splashes[j]] = [splashes[j], splashes[i]];
