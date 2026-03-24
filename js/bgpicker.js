@@ -22,7 +22,19 @@ function pic() {
 'https://www.pibis.net/img/bg/bg_20.jpg',
 'https://www.pibis.net/img/bg/bg_21.jpg',
 'https://www.pibis.net/img/bg/bg_22.jpg',
-'https://www.pibis.net/img/bg/bg_23.jpg'
+'https://www.pibis.net/img/bg/bg_23.jpg',
+'https://www.pibis.net/img/bg/bg_24.jpg',
+'https://www.pibis.net/img/bg/bg_25.jpg',
+'https://www.pibis.net/img/bg/bg_26.jpg',
+'https://www.pibis.net/img/bg/bg_27.jpg',
+'https://www.pibis.net/img/bg/bg_28.jpg',
+'https://www.pibis.net/img/bg/bg_29.jpg',
+'https://www.pibis.net/img/bg/bg_30.jpg',
+'https://www.pibis.net/img/bg/bg_31.jpg',
+'https://www.pibis.net/img/bg/bg_32.jpg',
+'https://www.pibis.net/img/bg/bg_33.jpg',
+'https://www.pibis.net/img/bg/bg_34.jpg',
+'https://www.pibis.net/img/bg/bg_35.jpg'
 ];
 
 
